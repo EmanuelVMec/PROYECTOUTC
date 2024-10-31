@@ -13,12 +13,13 @@ export default function App() {
         <View style={styles.logoContainer}>
           <Image source={require('./assets/logotrici.png')} style={styles.logo} />
         </View>
-        
+
+        <TouchableOpacity style={styles.buttonye}>
+        <Text style={styles.buttonTexttrici}>TRICIMOTERO</Text>
+        </TouchableOpacity>
+
         {/* Button container */}
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>TRICIMOTERO</Text>
-          </TouchableOpacity>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>INICIAR COMO CLIENTE</Text>
           </TouchableOpacity>
@@ -91,6 +92,20 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#000',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  buttonye: {
+    backgroundColor: '#000000',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    marginVertical: 5,
+    width: '80%',
+    alignItems: 'center',
+  },
+  buttonTexttrici: {
+    color: '#ffffff',
     fontSize: 16,
     fontWeight: 'bold',
   },
