@@ -34,13 +34,11 @@ export default function HomeScreen({ navigation }) { // Añadir `navigation` com
       </ImageBackground>
     </View>
 
-    
   );
+
 }
 
 // Tus estilos y demás configuración siguen igual
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
