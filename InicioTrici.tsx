@@ -1,9 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
 export default function InicioTrici() {
   return (
     <View style={styles.container}>
+      {/* Logo */}
+      <View style={styles.logoContainer}>
+        <Image source={require('./assets/logotrici.png')} style={styles.logo} />
+      </View>
+
       <Text style={styles.title}>INICIAR SESIÓN COMO TRABAJADOR</Text>
 
       <Text style={styles.label}>Ingrese su usuario</Text>
@@ -28,6 +33,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#fff',
   },
+  logoContainer: {
+    alignItems: 'center',
+    marginBottom: -20,
+  },
+  logo: {
+    width: 200, // Ajusta el tamaño según lo necesites
+    height: 200,
+    resizeMode: 'contain',
+    top: '-30%',
+    left: '0%',
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -48,13 +64,13 @@ const styles = StyleSheet.create({
   subText: {
     fontSize: 14,
     color: '#888',
-    marginBottom: 20,
+    marginBottom: 50,
   },
   loginButton: {
     backgroundColor: '#FF007F',
-    paddingVertical: 15,
+    paddingVertical: 14,
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 50,
   },
   loginButtonText: {
     color: '#fff',
