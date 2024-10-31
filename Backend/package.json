@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+},
+  "keywords": [],
+  "author": "Angel Julian Navarrete Cedeño",
+  "license": "ISC",
+  "description": "backend Contrilamana",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
