@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native';
 
-export default function HomeScreen({ navigation }) { // Añadir `navigation` como prop
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <ImageBackground source={require('./assets/siptrici.jpg')} style={styles.backgroundImage}>
@@ -14,14 +14,15 @@ export default function HomeScreen({ navigation }) { // Añadir `navigation` com
           <Image source={require('./assets/logotrici.png')} style={styles.logo} />
         </View>
 
+        {/* Botón para ir a la pantalla InicioTrici */}
         <TouchableOpacity
           style={styles.buttonye}
-          onPress={() => navigation.navigate('InicioTrici')} // Navega a InicioTrici
+          onPress={() => navigation.navigate('InicioTrici')}
         >
           <Text style={styles.buttonTexttrici}>TRICIMOTERO</Text>
         </TouchableOpacity>
 
-        {/* Button container */}
+        {/* Otros botones */}
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>INICIAR COMO CLIENTE</Text>
@@ -30,16 +31,10 @@ export default function HomeScreen({ navigation }) { // Añadir `navigation` com
             <Text style={styles.buttonText}>REGISTRARSE</Text>
           </TouchableOpacity>
         </View>
-        
       </ImageBackground>
     </View>
-
-    
   );
 }
-
-// Tus estilos y demás configuración siguen igual
-
 
 const styles = StyleSheet.create({
   container: {
@@ -53,20 +48,17 @@ const styles = StyleSheet.create({
   },
   steel: {
     position: 'absolute',
-    top: '-30%', // Adjust positioning to fit your layout
-    left: '-57%', // Adjust positioning to fit your layout
+    top: '-30%',
+    left: '-57%',
     backgroundColor: "rgba(48,168,41,1)",
     shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      width: 3,
-      height: 3
-    },
+    shadowOffset: { width: 3, height: 3 },
     elevation: 5,
     shadowOpacity: 1,
     shadowRadius: 0,
     overflow: "visible",
     borderWidth: 107,
-    width: 600,  // Adjust width and height as needed
+    width: 600,
     height: 600,
     transform: [{ rotate: '65deg' }],
   },
@@ -78,12 +70,6 @@ const styles = StyleSheet.create({
     width: 300,
     height: 300,
     resizeMode: 'contain',
-  },
-  subText: {
-    fontSize: 16,
-    color: '#fff',
-    textAlign: 'center',
-    marginTop: 10,
   },
   buttonContainer: {
     width: '100%',
