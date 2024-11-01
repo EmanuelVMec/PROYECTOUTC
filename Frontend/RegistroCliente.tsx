@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, KeyboardAvoidingView, Platform, ImageBackground } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function RegistroCliente({ navigation }) {
@@ -14,10 +14,13 @@ export default function RegistroCliente({ navigation }) {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <View style={styles.container}>
-        {/* Header con logo */}
-        <View style={styles.header}>
-          <Image source={require('./assets/logotrici.png')} style={styles.logo} />
-        </View>
+        {/* Fondo con imagen detrás del logo */}
+        <ImageBackground source={require('./assets/steelcli.png')} style={styles.backgroundImage}>
+          {/* Header con logo */}
+          <View style={styles.header}>
+            <Image source={require('./assets/logotrici.png')} style={styles.logo} />
+          </View>
+        </ImageBackground>
 
         {/* Botones de redes sociales */}
         <TouchableOpacity style={[styles.socialButton, { backgroundColor: '#DB4437' }]}>
@@ -77,13 +80,23 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#fff',
   },
+  backgroundImage: {
+    top: '-10%',
+    right: '10%',
+    left: '-20%',
+    width: '120%',
+    height: 250, // Ajusta la altura para que la imagen solo ocupe la mitad superior
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden', // Oculta la parte inferior de la imagen
+  },
   header: {
     alignItems: 'center',
-    marginBottom: 20,
   },
   logo: {
-    width: 200,
-    height: 80,
+    width: 150, // Ajusta el tamaño si es necesario
+    height: 150,
+    left: '5%',
     resizeMode: 'contain',
   },
   socialButton: {
@@ -92,7 +105,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 10,
     borderRadius: 7,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   socialButtonText: {
     color: '#fff',
@@ -102,7 +115,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     alignItems: 'center',
-    paddingBottom: 1,
+    paddingBottom: 10,
   },
   input: {
     borderBottomWidth: 1,
@@ -127,7 +140,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     alignItems: 'center',
     borderRadius: 50,
-    marginTop: 20,
+    marginTop: 7,
     width: '100%',
   },
   registerButtonText: {
