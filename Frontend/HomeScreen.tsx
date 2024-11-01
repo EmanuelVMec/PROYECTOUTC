@@ -27,7 +27,10 @@ export default function HomeScreen({ navigation }) {
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>INICIAR COMO CLIENTE</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity 
+            style={styles.button} 
+            onPress={() => navigation.navigate('RegistroCliente')} // Navegar a RegistroCliente
+          >
             <Text style={styles.buttonText}>REGISTRARSE</Text>
           </TouchableOpacity>
         </View>

@@ -3,7 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen';
 import InicioTrici from './InicioTrici';
-import Tricimotero from './Tricimotero'; // Import Tricimotero
+import Tricimotero from './Tricimotero';
+import RegistroCliente from './RegistroCliente'; // Importar RegistroCliente
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,11 @@ export default function App() {
           name="Tricimotero"
           component={Tricimotero}
           options={{ title: 'Tricimotero' }}
+        />
+        <Stack.Screen
+          name="RegistroCliente"
+          component={RegistroCliente}
+          options={{ title: 'Registro de Cliente' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
