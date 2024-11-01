@@ -24,9 +24,15 @@ export default function HomeScreen({ navigation }) {
 
         {/* Contenedor de botones adicionales */}
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
+          {/* Botón INICIAR COMO CLIENTE que navega a InicioCli */}
+          <TouchableOpacity 
+            style={styles.button} 
+            onPress={() => navigation.navigate('InicioCli')} // Navegar a InicioCli
+          >
             <Text style={styles.buttonText}>INICIAR COMO CLIENTE</Text>
           </TouchableOpacity>
+          
+          {/* Botón REGISTRARSE que navega a RegistroCliente */}
           <TouchableOpacity 
             style={styles.button} 
             onPress={() => navigation.navigate('RegistroCliente')} // Navegar a RegistroCliente
